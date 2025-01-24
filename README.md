@@ -8,11 +8,13 @@
   - 하지만 모델 load 시, load_in_8bit =True 인자를 주면, 밑과 같은 error발생 
 
 ### 1.
+- train_dataset.zip 압축풀기 
+### 2.
 ```
 pip install -r requirements.txt
 ```
 
-### 2.
+### 3.
 ```
 ACCELERATE_USE_FSDP=1 FSDP_CPU_RAM_EFFICIENT_LOADING=1 torchrun --nproc_per_node=2 ./lora_multi_gemma.py --config ./config.yaml
 ```
