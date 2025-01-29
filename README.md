@@ -2,9 +2,12 @@
 
 - 환경
   - runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
-- Task
-  - 8bit 양자화 모델을 fsdp로 lora 학습 시키기
-  - 양자화 하지 않았을 때는 밑의 코드를 실행시키니 학습이 문제없이 진행됨.
+- 모델 
+  - gemma-2-9b-it
+    - 8bit 양자화 모델
+- 학습 방법
+  - multi-gpu(fsdp)로 lora 학습 시키기
+  - 8bit로 양자화 하지 않았을 때는 밑의 코드(1,2,3)를 실행시키니 학습이 문제없이 진행됨.
   - 하지만 모델 load 시, load_in_8bit =True 인자를 주면, 밑과 같은 error발생 
 
 ### 1.
